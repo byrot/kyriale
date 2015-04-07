@@ -1,0 +1,50 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+\documentclass[12pt]{article} % use larger type; default would be 10pt
+
+\usepackage{fontspec}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+\usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{fullpage} % to reduce the margins
+
+
+\begin{document}
+
+% The title:
+\begin{center}\begin{huge}\textsc{Missa IV.}\end{huge}\end{center}
+%\begin{large}\textsc{Lux et origo}\hfill{\em V~době velikonoční}\end{large}
+
+% Here we set the space around the initial.
+\setspaceafterinitial{2.2mm plus 0em minus 0em}
+\setspacebeforeinitial{2.2mm plus 0em minus 0em}
+
+% Here we set the initial font.
+\def\greinitialformat#1{{\fontsize{43}{43}\selectfont #1}}
+
+% We set red lines here, comment it if you want black ones.
+%\redlines
+
+% We type a text in the top right corner of the score:
+%\commentary{{\small \emph{Cf. Is. 30, 19 . 30 ; Ps. 79}}}
+
+% and finally we include the score. The file must be in the same directory as this one.
+\vspace{0.5 cm}
+\includescore{Kyrie}
+
+\vspace{1 cm}
+\includescore{Gloria}
+
+\vspace{1 cm}
+\includescore{Sanctus}
+
+\vspace{1 cm}
+\includescore{Agnus}
+
+\vspace{1 cm}
+\includescore{Ite}
+
+
+\end{document}
