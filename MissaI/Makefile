@@ -1,7 +1,7 @@
 GREGORIO=gregorio
 LATEX=lualatex --shell-escape
 
-MAINTEX=MissaI
+MAINTEX=Missa
 GABC=$(shell find . -name '*.gabc')
 SCORES=$(patsubst %.gabc,%,$(GABC))
 TEXSCORES=$(patsubst %.gabc,%.tex,$(GABC))
