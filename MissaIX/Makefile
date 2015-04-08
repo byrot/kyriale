@@ -7,7 +7,7 @@ SCORES=$(patsubst %.gabc,%,$(GABC))
 TEXSCORES=$(patsubst %.gabc,%.tex,$(GABC))
 
 
-all: $(TEXSCORES) $(MAINTEX).pdf clean-aux
+all: clean $(TEXSCORES) $(MAINTEX).pdf
 
 %.pdf:
 	$(LATEX) $(patsubst %.pdf,%.tex,$@)
