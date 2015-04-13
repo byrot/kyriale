@@ -10,6 +10,22 @@
 \usepackage{gregoriotex} % for gregorio score inclusion
 \usepackage{fullpage} % to reduce the margins
 
+% custom settings for section headlines
+\usepackage{titlesec}
+\titleformat{\section}[block]{\huge\sc\filcenter}{}{1em}{}
+
+% macro info for informational subtitles
+\newcommand{\info}[2]{\large\textsc{#1}\hfill{\em #2}}
+
+% custom settings for ToC: no numbers, title, font style, dots
+\usepackage{tocloft}
+\setcounter{secnumdepth}{0}
+\renewcommand{\contentsname}{\hfil\huge\sc Obsah\hfil\par\vspace{1em}}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecfont}{\rm}
+\renewcommand{\cftsecpagefont}{\rm}
+
+
 
 \begin{document}
 
@@ -50,10 +66,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% MISSA I. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\include{MissaI}
-
-\begin{center}\begin{huge}\textsc{Missa I.}\end{huge}\end{center}
-\begin{large}\textsc{Lux et origo}\hfill{\em V~době velikonoční}\end{large}
+\section{Ordinárium I.}
+\info{Lux et origo}{V~době velikonoční}
 
 \vspace{0.5 cm}
 \includescore{MissaI/Kyrie}
@@ -68,7 +82,7 @@
 \includescore{MissaI/Agnus}
 
 \vspace{0.5 cm}
-\commentary{{\small \emph{Od Bílé soboty do soboty oktávu velikonočního včetně}}}
+\commentary{{\small \em{Od Bílé soboty do soboty oktávu velikonočního včetně}}}
 
 \vspace{0.5 cm}
 \includescore{MissaI/Ite-a}
@@ -85,7 +99,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% MISSA IV. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{center}\begin{huge}\textsc{Missa IV.}\end{huge}\end{center}
+\section{Ordinárium IV.}
 %\begin{large}\textsc{Lux et origo}\hfill{\em V~době velikonoční}\end{large}
 
 \vspace{0.5 cm}
@@ -110,7 +124,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% MISSA IX. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{center}\begin{huge}\textsc{Missa IX.}\end{huge}\end{center}
+\section{Ordinárium IX.}
 %\begin{large}\textsc{Lux et origo}\hfill{\em V~době velikonoční}\end{large}
 
 \vspace{0.5 cm}
@@ -128,5 +142,8 @@
 \vspace{1 cm}
 \includescore{MissaIX/Ite}
 
+
+\newpage
+\tableofcontents
 
 \end{document}
